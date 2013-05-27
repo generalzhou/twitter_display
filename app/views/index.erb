@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>Hello, world!</p>
+  <ul> 
+    <% if @tweets %>
+      <% @tweets.each do |tweet| %>
+      <li><%= "#{tweet.twitter_user.username} - #{tweet.time_posted}:  #{tweet.text}" %></li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
