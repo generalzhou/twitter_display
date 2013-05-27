@@ -5,7 +5,7 @@ class TwitterUser < ActiveRecord::Base
   def grab_tweets
     if self.tweets.empty?
       self.fetch_tweets!
-    elsif (Time.now - self.tweets.first.created_at) > [avg_time , 3600].min
+    elsif (Time.now - self.tweets.first.created_at) > [avg_time , 1].min
       puts 'Freshening up'
       self.fetch_tweets!
     end

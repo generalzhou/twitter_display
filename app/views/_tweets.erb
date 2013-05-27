@@ -1,0 +1,7 @@
+<ul class="tweets_display">   
+  <% if @tweets %>
+    <% @tweets.each do |tweet| %>
+    <li><%= "#{tweet.twitter_user.username} - #{tweet.time_posted}:  #{tweet.text}" %></li>
+  <% end %>
+  <% end %>
+</ul>
